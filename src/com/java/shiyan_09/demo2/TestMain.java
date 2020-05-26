@@ -6,8 +6,12 @@ public class TestMain {
         Flying[] test = new Flying[]{new Airliner(),new Fighter(),new J20()};
         for (Flying f:test
              ) {
-            f.fly();
+            TestMain.verify(f);
         }
+    }
+
+    public static void verify(Flying f){
+        f.fly();
     }
 
 }
