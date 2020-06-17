@@ -3,15 +3,14 @@ package com.java.shiyan_12.demoLast;
 import java.util.Scanner;
 
 public class Client {
-    public static void main(String[] args) throws NegativeException {
+    public static void main(String[] args) throws FingersException {
         Scanner in = new Scanner(System.in);
-        int count;
-        System.out.println("这颗苹果树上有几个苹果？");
-        count = in.nextInt();
-        if(count < 0){
-            throw new NegativeException();
-        }else {
-            System.out.println("的确有" + count + "个苹果");
-        }
+        int numberOfFinger;
+        System.out.print("你有几根手指：");
+        numberOfFinger = in.nextInt();
+        if(numberOfFinger != 10)
+            throw new FingersException();
+        else
+            System.out.println("你有完美的手指数量！");
     }
 }

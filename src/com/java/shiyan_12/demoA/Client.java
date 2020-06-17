@@ -17,6 +17,7 @@ public class Client {
             System.out.print("请重新输入除数：");
             B = in.nextInt();
         }finally {
+            ans = A / B;
             System.out.println(A + "/" + B + "="+ ans);
         }
     }
